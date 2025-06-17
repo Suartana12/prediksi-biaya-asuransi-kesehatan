@@ -2,6 +2,7 @@
 ## Domain Proyek
 **Latar Belakang**
 Industri asuransi merupakan pilar penting dalam sistem ekonomi dan kesehatan modern. Salah satu tantangan utama yang dihadapi oleh perusahaan asuransi kesehatan adalah aktuaria, yaitu proses menghitung dan mengelola risiko finansial. Penentuan premi yang akurat adalah kunci untuk menjaga profitabilitas perusahaan sekaligus menawarkan produk yang adil dan kompetitif kepada nasabah. Jika premi terlalu rendah, perusahaan berisiko mengalami kerugian. Sebaliknya, jika premi terlalu tinggi, produk menjadi tidak menarik bagi calon nasabah [[1](https://www.researchgate.net/profile/Munashe-Naphtali-Mupa/publication/389132064_Machine_Learning_in_Actuarial_Science_Enhancing_Predictive_Models_for_Insurance_Risk_Management/links/67b60a83645ef274a4897f9a/Machine-Learning-in-Actuarial-Science-Enhancing-Predictive-Models-for-Insurance-Risk-Management.pdf)].
+
 Besaran premi sangat bergantung pada estimasi biaya medis (klaim) yang akan dikeluarkan oleh seorang individu di masa depan. Biaya ini dipengaruhi oleh berbagai faktor risiko, termasuk faktor demografis (usia), kondisi kesehatan (misalnya, Indeks Massa Tubuh/BMI), dan pilihan gaya hidup (misalnya, kebiasaan merokok). Oleh karena itu, kemampuan untuk memprediksi biaya ini secara akurat menggunakan pendekatan data-driven menjadi aset strategis yang sangat berharga[[2](https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.201710-787OC)].
 
 **Mengapa dan Bagaimana Masalah Harus Diselesaikan**
