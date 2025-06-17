@@ -89,8 +89,15 @@ Metrik yang digunakan untuk mengevaluasi model regresi ini adalah:
     *  Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur seberapa baik model regresi "cocok" dengan data. Nilainya merepresentasikan proporsi varians pada variabel dependen (target) yang dapat dijelaskan oleh variabel independen (fitur). Nilai yang lebih dekat ke 1 menunjukkan model yang lebih baik.
 ### Hasil Evaluasi
 Tabel berikut merangkum kinerja dari ketiga model pada data uji:
-| Model                         | MAE               | RMSE              | R-squared    |
-|-------------------------------|-------------------|-------------------|--------------|
+| Model                        | MAE               | RMSE              | R-squared    |
+|------------------------------|-------------------|-------------------|--------------|
 | Linear Regression	           | 4181.19           | 5796.28           | 0.7836       |
-| Random Forest	              | 2503.26           | 4577.55           | 0.8614       |
+| Random Forest	           | 2503.26           | 4577.55           | 0.8614       |
 | Gradient Boosting	           | 2397.91           | 4337.89           | 0.8756       |
+
+### Analisis Hasil:
+*  Gradient Boosting secara jelas menjadi model dengan performa terbaik. Model ini berhasil mencapai nilai R-squared 0.876, yang berarti mampu menjelaskan sekitar 87.6% dari variabilitas dalam biaya asuransi, dan ini melampaui target awal (0.85).
+*  Nilai RMSE-nya adalah yang terendah, yaitu sekitar $4,338, menunjukkan bahwa rata-rata kesalahan prediksi model ini adalah yang paling kecil di antara ketiganya.
+Meskipun Random Forest juga memberikan hasil yang sangat baik (R-squared 0.86), Gradient Boosting sedikit lebih unggul.
+*  Linear Regression sebagai baseline memiliki performa yang jauh di bawah model ensemble, mengonfirmasi bahwa hubungan dalam data bersifat non-linear dan kompleks.
+Berdasarkan hasil ini, Gradient Boosting Regressor adalah model yang dipilih sebagai solusi akhir untuk proyek ini.
