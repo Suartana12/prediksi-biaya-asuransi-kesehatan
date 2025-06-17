@@ -25,9 +25,9 @@ Solusinya adalah dengan menerapkan Machine Learning, khususnya model regresi, un
 ### **Solution Statement (Pernyataan Solusi)**
 Untuk mencapai tujuan yang telah ditetapkan, solusi yang diajukan adalah sebagai berikut:
 1.  **Mengimplementasikan dan Membandingkan Beberapa Algoritma Regresi:** Proyek ini akan membangun, melatih, dan mengevaluasi tiga model machine learning yang berbeda untuk menemukan solusi terbaik:
-    *  **Linear Regression:** Digunakan sebagai model baseline untuk mengukur performa dasar.
-    *  **Random Forest Regressor:** Model ensemble yang kuat untuk menangkap hubungan non-linear.
-    *  **Gradient Boosting Regressor:** Model ensemble lain yang seringkali memberikan akurasi tinggi melalui proses pembelajaran sekuensial.
+      *  **Linear Regression:** Digunakan sebagai model baseline untuk mengukur performa dasar.
+      *  **Random Forest Regressor:** Model ensemble yang kuat untuk menangkap hubungan non-linear.
+      *  **Gradient Boosting Regressor:** Model ensemble lain yang seringkali memberikan akurasi tinggi melalui proses pembelajaran sekuensial.
 2.  **Mengukur Kinerja dengan Metrik Standar:** Kinerja dari setiap model akan diukur dan dibandingkan secara objektif menggunakan metrik evaluasi regresi, yaitu Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), dan R-squared (R^2). Model dengan nilai error terendah dan R^2 tertinggi akan dipilih sebagai solusi akhir yang paling optimal.
 
 ## Data Understanding
@@ -52,41 +52,41 @@ Beberapa temuan kunci dari tahap EDA:
 ### Data Preparation
 Tahapan ini dilakukan untuk menyiapkan data sebelum dimasukkan ke dalam model.
 1.  One-Hot Encoding:
-  *  Proses: Mengubah fitur kategorikal (sex, smoker, region) menjadi kolom-kolom biner.
-  *  Alasan: Algoritma machine learning memerlukan input berupa data numerik. Proses ini memastikan informasi kategorikal dapat diproses oleh model. Parameter drop_first=True digunakan untuk menghindari multikolinearitas.
+    *  Proses: Mengubah fitur kategorikal (sex, smoker, region) menjadi kolom-kolom biner.
+    *  Alasan: Algoritma machine learning memerlukan input berupa data numerik. Proses ini memastikan informasi kategorikal dapat diproses oleh model. Parameter drop_first=True digunakan untuk menghindari multikolinearitas.
 2.  Train-Test Split:
-  *  Proses: Membagi dataset menjadi data latih (80%) dan data uji (20%) menggunakan train_test_split dengan random_state=42 untuk memastikan reproduktifitas.
-  *  Alasan: Ini adalah praktik standar untuk mengevaluasi kinerja generalisasi model pada data yang belum pernah dilihat sebelumnya, sehingga mencegah overfitting.
+    *  Proses: Membagi dataset menjadi data latih (80%) dan data uji (20%) menggunakan train_test_split dengan random_state=42 untuk memastikan reproduktifitas.
+    *  Alasan: Ini adalah praktik standar untuk mengevaluasi kinerja generalisasi model pada data yang belum pernah dilihat sebelumnya, sehingga mencegah overfitting.
 3.  Standardisasi Fitur:
-  *  Proses: Menyamakan skala fitur-fitur numerik (age, bmi, children) menggunakan StandardScaler.
-  *  Alasan: Fitur-fitur memiliki skala yang berbeda (misalnya, age berkisar puluhan, bmi juga). Standardisasi membuat semua fitur memiliki rata-rata 0 dan standar deviasi 1. Ini sangat penting untuk model yang sensitif terhadap skala seperti Regresi Linear dan dapat membantu mempercepat konvergensi pada model lain. Fitting scaler hanya dilakukan pada data latih untuk mencegah data leakage.
+    *  Proses: Menyamakan skala fitur-fitur numerik (age, bmi, children) menggunakan StandardScaler.
+    *  Alasan: Fitur-fitur memiliki skala yang berbeda (misalnya, age berkisar puluhan, bmi juga). Standardisasi membuat semua fitur memiliki rata-rata 0 dan standar deviasi 1. Ini sangat penting untuk model yang sensitif terhadap skala seperti Regresi Linear dan dapat membantu mempercepat konvergensi pada model lain. Fitting scaler hanya dilakukan pada data latih untuk mencegah data leakage.
 
 ### Modeling
 Tiga model regresi dilatih untuk memprediksi charges.
 1.  Linear Regression:
-  *  Penjelasan: Model statistik yang memodelkan hubungan linear antara fitur dan target. Digunakan sebagai baseline.
-  *  Kelebihan: Cepat, sederhana, dan hasilnya sangat mudah diinterpretasikan.
-  *  Kekurangan: Tidak mampu menangkap pola non-linear yang kompleks.
+    *  Penjelasan: Model statistik yang memodelkan hubungan linear antara fitur dan target. Digunakan sebagai baseline.
+    *  Kelebihan: Cepat, sederhana, dan hasilnya sangat mudah diinterpretasikan.
+    *  Kekurangan: Tidak mampu menangkap pola non-linear yang kompleks.
 2.  Random Forest Regressor:
-  *  Penjelasan: Model ensemble yang terdiri dari banyak decision tree. Hasil prediksi adalah rata-rata dari prediksi semua pohon.
-  *  Kelebihan: Sangat baik dalam menangani hubungan non-linear, robust terhadap outlier, dan cenderung tidak overfitting.
-  *  Kekurangan: Lebih sulit diinterpretasikan (bersifat black box) dan membutuhkan lebih banyak sumber daya komputasi.
+    *  Penjelasan: Model ensemble yang terdiri dari banyak decision tree. Hasil prediksi adalah rata-rata dari prediksi semua pohon.
+    *  Kelebihan: Sangat baik dalam menangani hubungan non-linear, robust terhadap outlier, dan cenderung tidak overfitting.
+    *  Kekurangan: Lebih sulit diinterpretasikan (bersifat black box) dan membutuhkan lebih banyak sumber daya komputasi.
 3.  Gradient Boosting Regressor:
-  *  Penjelasan: Model ensemble yang membangun pohon secara sekuensial. Setiap pohon baru dilatih untuk memperbaiki kesalahan dari pohon-pohon sebelumnya.
-  *  Kelebihan: Umumnya memberikan tingkat akurasi prediksi yang sangat tinggi, seringkali menjadi pemenang dalam banyak kompetisi machine learning.
-  *  Kekurangan: Sensitif terhadap hyperparameter dan bisa overfitting jika tidak diatur dengan baik.
+    *  Penjelasan: Model ensemble yang membangun pohon secara sekuensial. Setiap pohon baru dilatih untuk memperbaiki kesalahan dari pohon-pohon sebelumnya.
+    *  Kelebihan: Umumnya memberikan tingkat akurasi prediksi yang sangat tinggi, seringkali menjadi pemenang dalam banyak kompetisi machine learning.
+    *  Kekurangan: Sensitif terhadap hyperparameter dan bisa overfitting jika tidak diatur dengan baik.
 ### Pemilihan Model Terbaik
 Berdasarkan solution statement, model terbaik dipilih berdasarkan perbandingan performa pada tahap evaluasi. Model yang menghasilkan nilai R-squared tertinggi dan RMSE terendah akan dianggap sebagai solusi terbaik. Dalam kasus ini, Gradient Boosting terbukti menjadi yang paling unggul.
 
 ## Evaluation
-###Metrik Evaluasi
+**Metrik Evaluasi**
 Metrik yang digunakan untuk mengevaluasi model regresi ini adalah:
 1.  Mean Absolute Error (MAE):
-  *  Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (misalnya, Dolar), sehingga mudah diinterpretasikan.
+    *  Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (misalnya, Dolar), sehingga mudah diinterpretasikan.
 2.  Root Mean Squared Error (RMSE):
-  *  Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Seperti MAE, satuannya sama dengan target, namun RMSE memberikan penalti yang lebih besar untuk kesalahan prediksi yang besar.
+    *  Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Seperti MAE, satuannya sama dengan target, namun RMSE memberikan penalti yang lebih besar untuk kesalahan prediksi yang besar.
 3.  R-squared (R^2):
-  *  Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur seberapa baik model regresi "cocok" dengan data. Nilainya merepresentasikan proporsi varians pada variabel dependen (target) yang dapat dijelaskan oleh variabel independen (fitur). Nilai yang lebih dekat ke 1 menunjukkan model yang lebih baik.
+    *  Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur seberapa baik model regresi "cocok" dengan data. Nilainya merepresentasikan proporsi varians pada variabel dependen (target) yang dapat dijelaskan oleh variabel independen (fitur). Nilai yang lebih dekat ke 1 menunjukkan model yang lebih baik.
 ### Hasil Evaluasi
 Tabel berikut merangkum kinerja dari ketiga model pada data uji:
 | Model                         | MAE               | RMSE              | R-squared    |
