@@ -17,6 +17,7 @@ Solusinya adalah dengan menerapkan Machine Learning, khususnya model regresi, un
 **Referensi Terkait**
 
 [1]  J. C. Rojas, K. A. Carey, D. P. Edelson, L. R. Venable, M. D. Howell, and M. M. Churpek, "Predicting intensive care unit readmission with machine learning using electronic health record data," Ann. Am. Thorac. Soc., vol. 15, no. 8, pp. 954-961, Aug. 2018, doi: 10.1513/AnnalsATS.201712-923OC.
+
 [2]  M. N. Mupa, S. Tafirenyika, M. R. Nyajeka, T. M. Moyo, and E. K. Zhuwankinyus, "Machine learning in actuarial science: Enhancing predictive models for insurance risk management," IRE Journals, vol. 8, no. 8, Feb. 2025.
 
 ## Business Understanding
