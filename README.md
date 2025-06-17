@@ -100,4 +100,5 @@ Tabel berikut merangkum kinerja dari ketiga model pada data uji:
 *  Nilai RMSE-nya adalah yang terendah, yaitu sekitar $4,338, menunjukkan bahwa rata-rata kesalahan prediksi model ini adalah yang paling kecil di antara ketiganya.
 Meskipun Random Forest juga memberikan hasil yang sangat baik (R-squared 0.86), Gradient Boosting sedikit lebih unggul.
 *  Linear Regression sebagai baseline memiliki performa yang jauh di bawah model ensemble, mengonfirmasi bahwa hubungan dalam data bersifat non-linear dan kompleks.
+
 Berdasarkan hasil ini, Gradient Boosting Regressor adalah model yang dipilih sebagai solusi akhir untuk proyek ini.
