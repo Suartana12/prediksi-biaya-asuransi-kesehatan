@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Putu Yoga Suartana
+# Laporan Proyek Machine Learning - Putu Yoga Suartana (MC298D5Y2265)
 ## Domain Proyek
 **Latar Belakang**
 Industri asuransi merupakan pilar penting dalam sistem ekonomi dan kesehatan modern. Salah satu tantangan utama yang dihadapi oleh perusahaan asuransi kesehatan adalah aktuaria, yaitu proses menghitung dan mengelola risiko finansial. Penentuan premi yang akurat adalah kunci untuk menjaga profitabilitas perusahaan sekaligus menawarkan produk yang adil dan kompetitif kepada nasabah. Jika premi terlalu rendah, perusahaan berisiko mengalami kerugian. Sebaliknya, jika premi terlalu tinggi, produk menjadi tidak menarik bagi calon nasabah [[1](https://www.researchgate.net/profile/Munashe-Naphtali-Mupa/publication/389132064_Machine_Learning_in_Actuarial_Science_Enhancing_Predictive_Models_for_Insurance_Risk_Management/links/67b60a83645ef274a4897f9a/Machine-Learning-in-Actuarial-Science-Enhancing-Predictive-Models-for-Insurance-Risk-Management.pdf)].
@@ -34,7 +34,7 @@ Untuk mencapai tujuan yang telah ditetapkan, solusi yang diajukan adalah sebagai
 Dataset yang digunakan dalam proyek ini adalah "Medical Cost Personal Datasets" yang bersumber dari platform Kaggle.
   *  Tautan Sumber Data: https://www.kaggle.com/datasets/mirichoi0218/insurance
   *  Informasi Data: Dataset ini terdiri dari 1338 baris dan 7 kolom. Berdasarkan analisis awal (df.info()), data ini dalam kondisi sangat baik dan tidak memiliki nilai yang hilang (missing values).
-**Variabel-Variabel pada Data**
+### **Variabel-Variabel pada Data**
   *  age: (Numerik) Usia nasabah.
   *  sex: (Kategorikal) Jenis kelamin ('female' atau 'male').
   *  bmi: (Numerik) Indeks Massa Tubuh.
@@ -42,8 +42,55 @@ Dataset yang digunakan dalam proyek ini adalah "Medical Cost Personal Datasets" 
   *  smoker: (Kategorikal) Status merokok ('yes' atau 'no').
   *  region: (Kategorikal) Wilayah tempat tinggal nasabah.
   *  charges: (Numerik, Target) Total biaya medis yang ditagihkan.
-**Exploratory Data Analysis (EDA)**
+### **Exploratory Data Analysis (EDA)**
 Beberapa temuan kunci dari tahap EDA:
-Distribusi Biaya: Histogram dari charges menunjukkan distribusi yang sangat miring ke kanan (right-skewed), menandakan bahwa sebagian besar nasabah memiliki biaya rendah, namun ada beberapa kasus dengan biaya yang sangat tinggi.
-Pengaruh Status Merokok: Visualisasi box plot dengan jelas menunjukkan bahwa smoker adalah faktor paling berpengaruh. Median biaya untuk perokok jauh lebih tinggi daripada non-perokok.
-Korelasi Fitur: Matriks korelasi menunjukkan bahwa age dan bmi memiliki korelasi positif dengan charges, meskipun tidak sekuat pengaruh dari status merokok.
+  *  Distribusi Biaya: Histogram dari charges menunjukkan distribusi yang sangat miring ke kanan (right-skewed), menandakan bahwa sebagian besar nasabah memiliki biaya rendah, namun ada beberapa kasus dengan biaya yang sangat tinggi.
+  *  Pengaruh Status Merokok: Visualisasi box plot dengan jelas menunjukkan bahwa smoker adalah faktor paling berpengaruh. Median biaya untuk perokok jauh lebih tinggi daripada non-perokok.
+  *  Korelasi Fitur: Matriks korelasi menunjukkan bahwa age dan bmi memiliki korelasi positif dengan charges, meskipun tidak sekuat pengaruh dari status merokok.
+
+
+### Data Preparation
+Tahapan ini dilakukan untuk menyiapkan data sebelum dimasukkan ke dalam model.
+1.  One-Hot Encoding:
+  *  Proses: Mengubah fitur kategorikal (sex, smoker, region) menjadi kolom-kolom biner.
+  *  Alasan: Algoritma machine learning memerlukan input berupa data numerik. Proses ini memastikan informasi kategorikal dapat diproses oleh model. Parameter drop_first=True digunakan untuk menghindari multikolinearitas.
+2.  Train-Test Split:
+  *  Proses: Membagi dataset menjadi data latih (80%) dan data uji (20%) menggunakan train_test_split dengan random_state=42 untuk memastikan reproduktifitas.
+  *  Alasan: Ini adalah praktik standar untuk mengevaluasi kinerja generalisasi model pada data yang belum pernah dilihat sebelumnya, sehingga mencegah overfitting.
+3.  Standardisasi Fitur:
+  *  Proses: Menyamakan skala fitur-fitur numerik (age, bmi, children) menggunakan StandardScaler.
+  *  Alasan: Fitur-fitur memiliki skala yang berbeda (misalnya, age berkisar puluhan, bmi juga). Standardisasi membuat semua fitur memiliki rata-rata 0 dan standar deviasi 1. Ini sangat penting untuk model yang sensitif terhadap skala seperti Regresi Linear dan dapat membantu mempercepat konvergensi pada model lain. Fitting scaler hanya dilakukan pada data latih untuk mencegah data leakage.
+
+### Modeling
+Tiga model regresi dilatih untuk memprediksi charges.
+1.  Linear Regression:
+  *  Penjelasan: Model statistik yang memodelkan hubungan linear antara fitur dan target. Digunakan sebagai baseline.
+  *  Kelebihan: Cepat, sederhana, dan hasilnya sangat mudah diinterpretasikan.
+  *  Kekurangan: Tidak mampu menangkap pola non-linear yang kompleks.
+2.  Random Forest Regressor:
+  *  Penjelasan: Model ensemble yang terdiri dari banyak decision tree. Hasil prediksi adalah rata-rata dari prediksi semua pohon.
+  *  Kelebihan: Sangat baik dalam menangani hubungan non-linear, robust terhadap outlier, dan cenderung tidak overfitting.
+  *  Kekurangan: Lebih sulit diinterpretasikan (bersifat black box) dan membutuhkan lebih banyak sumber daya komputasi.
+3.  Gradient Boosting Regressor:
+  *  Penjelasan: Model ensemble yang membangun pohon secara sekuensial. Setiap pohon baru dilatih untuk memperbaiki kesalahan dari pohon-pohon sebelumnya.
+  *  Kelebihan: Umumnya memberikan tingkat akurasi prediksi yang sangat tinggi, seringkali menjadi pemenang dalam banyak kompetisi machine learning.
+  *  Kekurangan: Sensitif terhadap hyperparameter dan bisa overfitting jika tidak diatur dengan baik.
+### Pemilihan Model Terbaik
+Berdasarkan solution statement, model terbaik dipilih berdasarkan perbandingan performa pada tahap evaluasi. Model yang menghasilkan nilai R-squared tertinggi dan RMSE terendah akan dianggap sebagai solusi terbaik. Dalam kasus ini, Gradient Boosting terbukti menjadi yang paling unggul.
+
+## Evaluation
+###Metrik Evaluasi
+Metrik yang digunakan untuk mengevaluasi model regresi ini adalah:
+1.  Mean Absolute Error (MAE):
+  *  Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (misalnya, Dolar), sehingga mudah diinterpretasikan.
+2.  Root Mean Squared Error (RMSE):
+  *  Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Seperti MAE, satuannya sama dengan target, namun RMSE memberikan penalti yang lebih besar untuk kesalahan prediksi yang besar.
+3.  R-squared (R^2):
+  *  Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur seberapa baik model regresi "cocok" dengan data. Nilainya merepresentasikan proporsi varians pada variabel dependen (target) yang dapat dijelaskan oleh variabel independen (fitur). Nilai yang lebih dekat ke 1 menunjukkan model yang lebih baik.
+### Hasil Evaluasi
+Tabel berikut merangkum kinerja dari ketiga model pada data uji:
+| Model                         | MAE               | RMSE              | R-squared    |
+|-------------------------------|-------------------|-------------------|--------------|
+| Linear Regression	           | 4181.19           | 5796.28           | 0.7836       |
+| Random Forest	              | 2503.26           | 4577.55           | 0.8614       |
+| Gradient Boosting	           | 2397.91           | 4337.89           | 0.8756       |
