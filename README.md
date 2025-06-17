@@ -16,6 +16,9 @@ Solusinya adalah dengan menerapkan Machine Learning, khususnya model regresi, un
 
 **Referensi Terkait**
 
+[1]  J. C. Rojas, K. A. Carey, D. P. Edelson, L. R. Venable, M. D. Howell, and M. M. Churpek, "Predicting intensive care unit readmission with machine learning using electronic health record data," Ann. Am. Thorac. Soc., vol. 15, no. 8, pp. 954-961, Aug. 2018, doi: 10.1513/AnnalsATS.201712-923OC.
+[2]  M. N. Mupa, S. Tafirenyika, M. R. Nyajeka, T. M. Moyo, and E. K. Zhuwankinyus, "Machine learning in actuarial science: Enhancing predictive models for insurance risk management," IRE Journals, vol. 8, no. 8, Feb. 2025.
+
 ## Business Understanding
 **Problem Statements (Pernyataan Masalah)**
 
@@ -60,6 +63,8 @@ Beberapa temuan kunci dari tahap EDA:
   *  Distribusi Biaya: Histogram dari charges menunjukkan distribusi yang sangat miring ke kanan (right-skewed), menandakan bahwa sebagian besar nasabah memiliki biaya rendah, namun ada beberapa kasus dengan biaya yang sangat tinggi.
   *  Pengaruh Status Merokok: Visualisasi box plot dengan jelas menunjukkan bahwa smoker adalah faktor paling berpengaruh. Median biaya untuk perokok jauh lebih tinggi daripada non-perokok.
   *  Korelasi Fitur: Matriks korelasi menunjukkan bahwa age dan bmi memiliki korelasi positif dengan charges, meskipun tidak sekuat pengaruh dari status merokok.
+
+![EDA yang menunjukkan pengaruh 'smoker'](img/smoker.png)
 
 ### Data Preparation
 Tahapan ini dilakukan untuk menyiapkan data sebelum dimasukkan ke dalam model.
