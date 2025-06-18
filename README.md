@@ -41,9 +41,9 @@ Solusinya adalah dengan menerapkan Machine Learning, khususnya model regresi, un
 Untuk mencapai tujuan yang telah ditetapkan, solusi yang diajukan adalah sebagai berikut:
 
 1. Mengimplementasikan dan Membandingkan Beberapa Algoritma Regresi: Proyek ini akan membangun, melatih, dan mengevaluasi tiga model machine learning yang berbeda untuk menemukan solusi terbaik:
-  * Linear Regression: Digunakan sebagai model baseline.
-  * Random Forest Regressor: Model ensemble yang kuat.
-  * Gradient Boosting Regressor: Model ensemble lain yang seringkali memberikan akurasi tinggi.
+    * Linear Regression: Digunakan sebagai model baseline.
+    * Random Forest Regressor: Model ensemble yang kuat.
+    * Gradient Boosting Regressor: Model ensemble lain yang seringkali memberikan akurasi tinggi.
 2. Mengukur Kinerja dengan Metrik Standar: Kinerja dari setiap model akan diukur dan dibandingkan secara objektif menggunakan metrik evaluasi regresi, yaitu Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), dan R-squared (R^2). Model dengan nilai error terendah dan R^2 tertinggi akan dipilih sebagai solusi akhir yang paling optimal.
 
 ## Data Understanding
@@ -68,27 +68,27 @@ Dataset yang digunakan dalam proyek ini adalah "Medical Cost Personal Datasets" 
 
 ## Data Preparation
 1. One-Hot Encoding:
-  * Alasan: Algoritma machine learning memerlukan input numerik. Teknik ini mengubah fitur kategorikal menjadi format biner yang dapat diproses model.
+    * Alasan: Algoritma machine learning memerlukan input numerik. Teknik ini mengubah fitur kategorikal menjadi format biner yang dapat diproses model.
 2. Train-Test Split:
-  * Alasan: Memisahkan data untuk melatih dan menguji model secara terpisah, guna memastikan evaluasi yang objektif dan menghindari overfitting.
+    * Alasan: Memisahkan data untuk melatih dan menguji model secara terpisah, guna memastikan evaluasi yang objektif dan menghindari overfitting.
 3. Standardisasi Fitur:
-  * Alasan: Fitur numerik memiliki skala yang berbeda. Standardisasi menyamakan skala agar setiap fitur memiliki kontribusi yang setara, yang penting untuk beberapa model seperti Regresi Linear.
+    * Alasan: Fitur numerik memiliki skala yang berbeda. Standardisasi menyamakan skala agar setiap fitur memiliki kontribusi yang setara, yang penting untuk beberapa model seperti Regresi Linear.
 
 ## Modeling
 Tiga model machine learning dilatih untuk memprediksi `charges`.
 
 1. Linear Regression:
-  * Parameter: Menggunakan parameter default dari scikit-learn.
-  * Kelebihan: Cepat, sederhana, dan hasilnya sangat mudah diinterpretasikan.
-  * Kekurangan: Tidak mampu menangkap pola non-linear yang kompleks.
+    * Parameter: Menggunakan parameter default dari scikit-learn.
+    * Kelebihan: Cepat, sederhana, dan hasilnya sangat mudah diinterpretasikan.
+    * Kekurangan: Tidak mampu menangkap pola non-linear yang kompleks.
 2. Random Forest Regressor:
-  * Parameter: n_estimators=100, random_state=42. n_estimators menentukan jumlah pohon dalam "hutan", sementara random_state memastikan hasil yang dapat direproduksi.
-  * Kelebihan: Sangat baik dalam menangani hubungan non-linear, robust terhadap outlier, dan cenderung tidak overfitting.
-  * Kekurangan: Lebih sulit diinterpretasikan (bersifat black box) dan membutuhkan lebih banyak sumber daya komputasi.
+    * Parameter: n_estimators=100, random_state=42. n_estimators menentukan jumlah pohon dalam "hutan", sementara random_state memastikan hasil yang dapat direproduksi.
+    * Kelebihan: Sangat baik dalam menangani hubungan non-linear, robust terhadap outlier, dan cenderung tidak overfitting.
+    * Kekurangan: Lebih sulit diinterpretasikan (bersifat black box) dan membutuhkan lebih banyak sumber daya komputasi.
 3. Gradient Boosting Regressor:
-  * Parameter: n_estimators=100, random_state=42. Parameter yang sama dengan Random Forest digunakan untuk perbandingan yang adil.
-  * Kelebihan: Umumnya memberikan tingkat akurasi prediksi yang sangat tinggi melalui pembelajaran sekuensial yang memperbaiki kesalahan.
-  * Kekurangan: Sensitif terhadap hyperparameter dan bisa overfitting jika tidak diatur dengan baik.
+    * Parameter: n_estimators=100, random_state=42. Parameter yang sama dengan Random Forest digunakan untuk perbandingan yang adil.
+    * Kelebihan: Umumnya memberikan tingkat akurasi prediksi yang sangat tinggi melalui pembelajaran sekuensial yang memperbaiki kesalahan.
+    * Kekurangan: Sensitif terhadap hyperparameter dan bisa overfitting jika tidak diatur dengan baik.
 
 Pemilihan Model Terbaik: Model terbaik dipilih berdasarkan hasil evaluasi kuantitatif. Model yang menghasilkan nilai R-squared tertinggi dan RMSE terendah akan dianggap sebagai solusi terbaik.
 
@@ -97,20 +97,17 @@ Pemilihan Model Terbaik: Model terbaik dipilih berdasarkan hasil evaluasi kuanti
 
 1. Mean Absolute Error (MAE):
 
-  * Formula: MAE=frac1nsum_i=1^n∣y_i−haty_i∣
-  * Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (Dolar).
+    * Formula: MAE=frac1nsum_i=1^n∣y_i−haty_i∣
+    * Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (Dolar).
   
 2. Root Mean Squared Error (RMSE):
 
-  * Formula: RMSE=sqrtfrac1nsum_i=1^n(y_i−haty_i)^2
-  * Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Memberikan bobot lebih pada kesalahan prediksi yang besar.
+    * Formula: RMSE=sqrtfrac1nsum_i=1^n(y_i−haty_i)^2
+    * Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Memberikan bobot lebih pada kesalahan prediksi yang besar.
 
 3. R-squared (R^2):
 
-  * Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur proporsi varians pada variabel target yang dapat dijelaskan oleh model. Nilai mendekati 1 menunjukkan model yang lebih baik.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+    * Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur proporsi varians pada variabel target yang dapat dijelaskan oleh model. Nilai mendekati 1 menunjukkan model yang lebih baik.
 
 **Hasil Evaluasi**
 
