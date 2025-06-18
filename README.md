@@ -18,9 +18,9 @@ Solusinya adalah dengan menerapkan Machine Learning, khususnya model regresi, un
 
 **Referensi Terkait**
 
-[1](https://www.researchgate.net/profile/Munashe-Naphtali-Mupa/publication/389132064_Machine_Learning_in_Actuarial_Science_Enhancing_Predictive_Models_for_Insurance_Risk_Management/links/67b60a83645ef274a4897f9a/Machine-Learning-in-Actuarial-Science-Enhancing-Predictive-Models-for-Insurance-Risk-Management.pdf)   M. N. Mupa, S. Tafirenyika, M. R. Nyajeka, T. M. Moyo, and E. K. Zhuwankinyus, "Machine learning in actuarial science: Enhancing predictive models for insurance risk management," IRE Journals, vol. 8, no. 8, Feb. 2025.
+[[1]](https://www.researchgate.net/profile/Munashe-Naphtali-Mupa/publication/389132064_Machine_Learning_in_Actuarial_Science_Enhancing_Predictive_Models_for_Insurance_Risk_Management/links/67b60a83645ef274a4897f9a/Machine-Learning-in-Actuarial-Science-Enhancing-Predictive-Models-for-Insurance-Risk-Management.pdf) M. N. Mupa, S. Tafirenyika, M. R. Nyajeka, T. M. Moyo, and E. K. Zhuwankinyus, "Machine learning in actuarial science: Enhancing predictive models for insurance risk management," IRE Journals, vol. 8, no. 8, Feb. 2025.
 
-[2](https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.201710-787OC)   J. C. Rojas, K. A. Carey, D. P. Edelson, L. R. Venable, M. D. Howell, and M. M. Churpek, "Predicting intensive care unit readmission with machine learning using electronic health record data," Ann. Am. Thorac. Soc., vol. 15, no. 8, pp. 954-961, Aug. 2018, doi: 10.1513/AnnalsATS.201712-923OC.
+[[2]](https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.201710-787OC)   J. C. Rojas, K. A. Carey, D. P. Edelson, L. R. Venable, M. D. Howell, and M. M. Churpek, "Predicting intensive care unit readmission with machine learning using electronic health record data," Ann. Am. Thorac. Soc., vol. 15, no. 8, pp. 954-961, Aug. 2018, doi: 10.1513/AnnalsATS.201712-923OC.
 
 ## Business Understanding
 ### Problem Statements
