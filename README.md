@@ -109,7 +109,7 @@ Pemilihan Model Terbaik: Model terbaik dipilih berdasarkan hasil evaluasi kuanti
 
 3. R-squared (R^2):
 
-    * Formula: $$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$
+    * Formula: $$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$ 
     * Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur proporsi varians pada variabel target yang dapat dijelaskan oleh model. Nilai mendekati 1 menunjukkan model yang lebih baik.
 
 **Hasil Evaluasi**
