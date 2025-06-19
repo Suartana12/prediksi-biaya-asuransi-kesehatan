@@ -99,17 +99,20 @@ Pemilihan Model Terbaik: Model terbaik dipilih berdasarkan hasil evaluasi kuanti
 
 1. Mean Absolute Error (MAE):
 
-    * Formula:  ![Rumus MAE](img/nama_file_gambar.png)
+    * Formula:  ![Rumus MAE](img/MAE.jpg)
+
     * Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (Dolar).
   
 2. Root Mean Squared Error (RMSE):
 
-    * Formula:  ![Rumus RMSE](https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20RMSE%20%3D%20%5Csqrt%7B%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%28y_i%20-%20%5Chat%7By%7D_i%29%5E2%7D)
+    * Formula:  ![Rumus RMSE](img/RMSE.jpg)
+
     * Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Memberikan bobot lebih pada kesalahan prediksi yang besar.
 
 3. R-squared ($R^2$):
 
-    * Formula:  ![Rumus R-squared](https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20R%5E2%20%3D%201%20-%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%28y_i%20-%20%5Chat%7By%7D_i%29%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%28y_i%20-%20%5Cbar%7By%7D%29%5E2%7D)
+    * Formula:  ![Rumus R-squared](img/R-squared.jpg)
+
     * Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur proporsi varians pada variabel target yang dapat dijelaskan oleh model. Nilai mendekati 1 menunjukkan model yang lebih baik.
 
 **Hasil Evaluasi**
