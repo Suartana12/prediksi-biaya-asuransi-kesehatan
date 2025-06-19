@@ -4,7 +4,9 @@
 
 **Latar Belakang**
 
-Industri asuransi merupakan pilar penting dalam sistem ekonomi dan kesehatan modern. Salah satu tantangan fundamental yang dihadapi oleh perusahaan asuransi kesehatan adalah aktuaria, yaitu proses menghitung dan mengelola risiko finansial. Penentuan premi yang akurat adalah kunci untuk menjaga profitabilitas perusahaan sekaligus menawarkan produk yang adil dan kompetitif kepada nasabah. Jika premi terlalu rendah, perusahaan berisiko mengalami kerugian. Sebaliknya, jika premi terlalu tinggi, produk menjadi tidak menarik bagi calon nasabah.
+Industri asuransi merupakan pilar penting dalam sistem ekonomi dan kesehatan modern. Salah satu tantangan fundamental yang dihadapi oleh perusahaan asuransi kesehatan adalah aktuaria, yaitu proses menghitung dan mengelola risiko finansial. Penentuan premi yang akurat adalah kunci untuk menjaga profitabilitas perusahaan sekaligus menawarkan produk yang adil dan kompetitif kepada nasabah. Pendekatan machine learning telah terbukti dapat meningkatkan akurasi model prediktif dalam praktik aktuaria dan manajemen risiko asuransi [1](https://www.researchgate.net/profile/Munashe-Naphtali-Mupa/publication/389132064_Machine_Learning_in_Actuarial_Science_Enhancing_Predictive_Models_for_Insurance_Risk_Management/links/67b60a83645ef274a4897f9a/Machine-Learning-in-Actuarial-Science-Enhancing-Predictive-Models-for-Insurance-Risk-Management.pdf).
+
+Besaran premi sangat bergantung pada estimasi biaya medis (klaim) yang akan dikeluarkan oleh seorang individu di masa depan. Biaya ini dipengaruhi oleh berbagai faktor risiko, termasuk faktor demografis (usia), kondisi kesehatan (misalnya, Indeks Massa Tubuh/BMI), dan pilihan gaya hidup (misalnya, kebiasaan merokok). Oleh karena itu, kemampuan untuk memprediksi biaya ini secara akurat menggunakan pendekatan data-driven menjadi aset strategis yang sangat berharga. Hal ini sejalan dengan berbagai penelitian yang telah berhasil menerapkan machine learning pada data rekam medis elektronik untuk tugas-tugas prediksi klinis yang kompleks [2](https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.201710-787OC).
 
 **Mengapa dan Bagaimana Masalah Harus Diselesaikan**
 
@@ -18,9 +20,9 @@ Solusinya adalah dengan menerapkan Machine Learning, khususnya model regresi, un
 
 **Referensi Terkait**
 
-[[1]](https://www.researchgate.net/profile/Munashe-Naphtali-Mupa/publication/389132064_Machine_Learning_in_Actuarial_Science_Enhancing_Predictive_Models_for_Insurance_Risk_Management/links/67b60a83645ef274a4897f9a/Machine-Learning-in-Actuarial-Science-Enhancing-Predictive-Models-for-Insurance-Risk-Management.pdf) M. N. Mupa, S. Tafirenyika, M. R. Nyajeka, T. M. Moyo, and E. K. Zhuwankinyus, "Machine learning in actuarial science: Enhancing predictive models for insurance risk management," IRE Journals, vol. 8, no. 8, Feb. 2025.
+[1] M. N. Mupa, S. Tafirenyika, M. R. Nyajeka, T. M. Moyo, and E. K. Zhuwankinyus, "Machine learning in actuarial science: Enhancing predictive models for insurance risk management," IRE Journals, vol. 8, no. 8, Feb. 2025.
 
-[[2]](https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.201710-787OC)   J. C. Rojas, K. A. Carey, D. P. Edelson, L. R. Venable, M. D. Howell, and M. M. Churpek, "Predicting intensive care unit readmission with machine learning using electronic health record data," Ann. Am. Thorac. Soc., vol. 15, no. 8, pp. 954-961, Aug. 2018, doi: 10.1513/AnnalsATS.201712-923OC.
+[2] J. C. Rojas, K. A. Carey, D. P. Edelson, L. R. Venable, M. D. Howell, and M. M. Churpek, "Predicting intensive care unit readmission with machine learning using electronic health record data," Ann. Am. Thorac. Soc., vol. 15, no. 8, pp. 954-961, Aug. 2018, doi: 10.1513/AnnalsATS.201712-923OC.
 
 ## Business Understanding
 ### Problem Statements
