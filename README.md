@@ -78,15 +78,15 @@ Dataset yang digunakan dalam proyek ini adalah "Medical Cost Personal Datasets" 
 Tiga model machine learning dilatih untuk memprediksi `charges`.
 
 1. Linear Regression:
-    * Parameter: Menggunakan parameter default dari scikit-learn.
+    * Parameter: Menggunakan parameter default dari `scikit-learn`.
     * Kelebihan: Cepat, sederhana, dan hasilnya sangat mudah diinterpretasikan.
     * Kekurangan: Tidak mampu menangkap pola non-linear yang kompleks.
 2. Random Forest Regressor:
-    * Parameter: n_estimators=100, random_state=42. n_estimators menentukan jumlah pohon dalam "hutan", sementara random_state memastikan hasil yang dapat direproduksi.
+    * Parameter: `n_estimators=100`, `random_state=42`. `n_estimators` menentukan jumlah pohon dalam "hutan", sementara random_state memastikan hasil yang dapat direproduksi.
     * Kelebihan: Sangat baik dalam menangani hubungan non-linear, robust terhadap outlier, dan cenderung tidak overfitting.
     * Kekurangan: Lebih sulit diinterpretasikan (bersifat black box) dan membutuhkan lebih banyak sumber daya komputasi.
 3. Gradient Boosting Regressor:
-    * Parameter: n_estimators=100, random_state=42. Parameter yang sama dengan Random Forest digunakan untuk perbandingan yang adil.
+    * Parameter: `n_estimators=100`, `random_state=42`. Parameter yang sama dengan Random Forest digunakan untuk perbandingan yang adil.
     * Kelebihan: Umumnya memberikan tingkat akurasi prediksi yang sangat tinggi melalui pembelajaran sekuensial yang memperbaiki kesalahan.
     * Kekurangan: Sensitif terhadap hyperparameter dan bisa overfitting jika tidak diatur dengan baik.
 
