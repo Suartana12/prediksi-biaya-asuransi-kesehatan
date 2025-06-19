@@ -99,7 +99,7 @@ Pemilihan Model Terbaik: Model terbaik dipilih berdasarkan hasil evaluasi kuanti
 
 1. Mean Absolute Error (MAE):
 
-    * Formula:  ![Rumus MAE](https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20MAE%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%7Cy_i%20-%20%5Chat%7By%7D_i%7C)
+    * Formula:  ![Rumus MAE](img/nama_file_gambar.png)
     * Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (Dolar).
   
 2. Root Mean Squared Error (RMSE):
