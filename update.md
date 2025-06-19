@@ -35,7 +35,7 @@ Solusinya adalah dengan menerapkan Machine Learning, khususnya model regresi, un
 
 1. Mengembangkan sebuah model regresi machine learning yang dapat memprediksi variabel `charges` (biaya) dengan tingkat kesalahan (error) serendah mungkin.
 2. Mengidentifikasi dan mengkuantifikasi pengaruh dari fitur-fitur kunci seperti `age`, `bmi`, dan `smoker` terhadap biaya asuransi.
-3. Mencapai performa model yang solid, dengan target metrik R-squared (R^2) di atas 0.85.
+3. Mencapai performa model yang solid, dengan target metrik R-squared ($R^2$) di atas 0.85.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 
@@ -46,7 +46,7 @@ Untuk mencapai tujuan yang telah ditetapkan, solusi yang diajukan adalah sebagai
     * Linear Regression: Digunakan sebagai model baseline.
     * Random Forest Regressor: Model ensemble yang kuat.
     * Gradient Boosting Regressor: Model ensemble lain yang seringkali memberikan akurasi tinggi.
-2. Mengukur Kinerja dengan Metrik Standar: Kinerja dari setiap model akan diukur dan dibandingkan secara objektif menggunakan metrik evaluasi regresi, yaitu Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), dan R-squared (R^2). Model dengan nilai error terendah dan R^2 tertinggi akan dipilih sebagai solusi akhir yang paling optimal.
+2. Mengukur Kinerja dengan Metrik Standar: Kinerja dari setiap model akan diukur dan dibandingkan secara objektif menggunakan metrik evaluasi regresi, yaitu Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), dan R-squared ($R^2$). Model dengan nilai error terendah dan $R^2$ tertinggi akan dipilih sebagai solusi akhir yang paling optimal.
 
 ## Data Understanding
 Dataset yang digunakan dalam proyek ini adalah "Medical Cost Personal Datasets" yang bersumber dari platform Kaggle.
@@ -99,17 +99,17 @@ Pemilihan Model Terbaik: Model terbaik dipilih berdasarkan hasil evaluasi kuanti
 
 1. Mean Absolute Error (MAE):
 
-    * Formula: $$MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$
+    * Formula:  ![Rumus MAE](https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20MAE%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%7Cy_i%20-%20%5Chat%7By%7D_i%7C)
     * Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (Dolar).
   
 2. Root Mean Squared Error (RMSE):
 
-    * Formula: $$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$$
+    * Formula:  ![Rumus RMSE](https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20RMSE%20%3D%20%5Csqrt%7B%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%28y_i%20-%20%5Chat%7By%7D_i%29%5E2%7D)
     * Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Memberikan bobot lebih pada kesalahan prediksi yang besar.
 
-3. R-squared (R^2):
+3. R-squared ($R^2$):
 
-    * Formula: $$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$ 
+    * Formula:  ![Rumus R-squared](https://latex.codecogs.com/png.latex?%5Cdpi%7B150%7D%20R%5E2%20%3D%201%20-%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%28y_i%20-%20%5Chat%7By%7D_i%29%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%28y_i%20-%20%5Cbar%7By%7D%29%5E2%7D)
     * Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur proporsi varians pada variabel target yang dapat dijelaskan oleh model. Nilai mendekati 1 menunjukkan model yang lebih baik.
 
 **Hasil Evaluasi**
