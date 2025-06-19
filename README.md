@@ -99,16 +99,17 @@ Pemilihan Model Terbaik: Model terbaik dipilih berdasarkan hasil evaluasi kuanti
 
 1. Mean Absolute Error (MAE):
 
-    * Formula: MAE=frac1nsum_i=1^n∣y_i−haty_i∣
+    * Formula: $$MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$
     * Penjelasan: MAE adalah rata-rata dari nilai absolut selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan gambaran tentang besarnya kesalahan prediksi dalam satuan asli (Dolar).
   
 2. Root Mean Squared Error (RMSE):
 
-    * Formula: RMSE=sqrtfrac1nsum_i=1^n(y_i−haty_i)^2
+    * Formula: $$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$$
     * Penjelasan: RMSE adalah akar kuadrat dari rata-rata kesalahan kuadrat. Memberikan bobot lebih pada kesalahan prediksi yang besar.
 
 3. R-squared (R^2):
 
+    * Formula: $$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$
     * Penjelasan: R-squared (Koefisien Determinasi) adalah metrik statistik yang mengukur proporsi varians pada variabel target yang dapat dijelaskan oleh model. Nilai mendekati 1 menunjukkan model yang lebih baik.
 
 **Hasil Evaluasi**
